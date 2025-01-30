@@ -1,0 +1,41 @@
+[project]
+name = "survey-llm-graphdb"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "T-death", email = "suketawada0612@gmail.com" }
+]
+dependencies = [
+    "jupyter>=1.1.1",
+    "lab>=8.3",
+    "jupyterlab>=4.3.1",
+    "ipykernel>=6.29.5",
+    "python-dotenv>=1.0.1",
+    "langchain-ollama>=0.2.0",
+    "pi>=0.1.2",
+    "pillow>=11.0.0",
+    "unstructured>=0.16.5",
+    "pi-heif>=0.20.0",
+    "unstructured-inference>=0.8.1",
+    "unstructured-pytesseract>=0.3.13",
+    "tqdm>=4.67.0",
+    "langchain-community>=0.3.7",
+    "neo4j>=5.26.0",
+    "faiss-cpu>=1.9.0.post1",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = []
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/survey_llm_graphdb"]
